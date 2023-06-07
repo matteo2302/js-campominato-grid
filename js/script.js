@@ -11,9 +11,12 @@ button.addEventListener("click", function () {
   for (i = 0; i < totalCell; i++) {
     board.innerHTML += `<div class="cell"> ${[i + 1]}</div>`;
   }
-});
-let cell = document.querySelectorAll(".cell");
-cell.addEventListener("click", function () {
-  cell.classList.add("active");
-  console.log(cell);
+  let cells = document.querySelectorAll(".cell");
+  for (i = 0; i < cells.length; i++) {
+    const cell = cells[i];
+    cell.addEventListener("click", function () {
+      cell.classList.add("active");
+      console.log(cell.innerText);
+    });
+  }
 });
