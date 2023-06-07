@@ -10,6 +10,6 @@ button.addEventListener("click", function () {
   board.classList.remove("d-none");
   for (i = 0; i < totalCell; i++) {
     board.innerHTML += `<div class="cell"></div>`;
-    cell.innerText += $[i + 1];
+    cell.innerText += [i + 1];
   }
 });
